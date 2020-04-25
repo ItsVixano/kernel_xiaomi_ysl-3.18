@@ -662,8 +662,8 @@ bool fts_check_fw_valid(struct i2c_client *client)
 static int check_chip_id(u8 chip_id1, u8 chip_id2)
 {
 #if FTS_CHIP_IDC
-	if ((chip_id1 == chip_types.chip_idh)
-			&& (chip_id2 == chip_types.chip_idl) {
+	if (chip_id1 == chip_types.chip_idh
+			&& chip_id2 == chip_types.chip_idl) {
 #else
 	if (chip_id1 == chip_types.chip_idh) {
 #endif
